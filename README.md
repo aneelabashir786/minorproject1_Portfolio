@@ -5,12 +5,6 @@ This portfolio represents my work, experience, and passion for web development.
 
 ---
 
-##  Live Demo
- **View Live Website:**  
-https://aneelabashir786.github.io/minorproject1_Portfolio/
-
----
-
 ##  Sections Included
 
 -  **Home** – Introduction and landing section  
