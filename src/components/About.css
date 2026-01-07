@@ -1,0 +1,158 @@
+/* About Section */
+.about-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0a0a0a, #1a0033);
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.about-section .title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #9b59b6;
+    font-weight: 700;
+}
+
+/* Wrapper for bio */
+.about-wrapper {
+    display: flex;
+    flex-direction: column; /* stack bio and skills vertically */
+    align-items: center;
+    gap: 40px;
+}
+
+/* About bio */
+.about-bio {
+    max-width: 700px;
+    text-align: center;
+}
+
+.about-bio p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.about-btn .btn-outline {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid #9b59b6;
+    color: #9b59b6;
+    border-radius: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.about-btn .btn-outline:hover {
+    background-color: #9b59b6;
+    color: #fff;
+}
+
+/* Skills container */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;       /* allows wrapping on smaller screens */
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Skill circle card */
+.skill-circle-card {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.skill-circle-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(155, 89, 182, 0.4);
+}
+
+/* Rotate SVG for progress starting from top */
+.skill-circle-card svg {
+    transform: rotate(-90deg);
+    transition: stroke 0.3s ease;
+}
+
+/* Circle background and fill */
+.circle-bg {
+    fill: none;
+    stroke: #3a0a3f;
+    stroke-width: 10;
+    transition: stroke 0.3s ease;
+}
+
+.circle-fill {
+    fill: none;
+    stroke: #9b59b6;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke 0.3s ease;
+}
+
+.skill-circle-card:hover .circle-fill {
+    stroke: #c27aff;
+}
+
+/* Skill icon */
+.skill-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg); /* counter-rotate to keep icon straight */
+    font-size: 2rem;
+    color: #9b59b6;
+    transition: color 0.3s ease;
+}
+
+.skill-circle-card:hover .skill-icon {
+    color: #c27aff;
+}
+
+/* Skill name */
+.skill-name {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.skill-circle-card:hover .skill-name {
+    color: #c27aff;
+}
+
+/* Fade-up animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-bio {
+        text-align: center;
+    }
+
+    .skills-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
